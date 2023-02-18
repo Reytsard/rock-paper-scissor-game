@@ -31,5 +31,21 @@ function getComputerChoice(){
     }
 }
 
+function playRound(playerSelection, computerSelection){
+    playerSelection.toLowerCase();
+    computerSelection.toLowerCase();
+    if(playerSelection == "paper" && computerSelection == "rock"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    } else if (playerSelection == "scissor" && computerSelection == "paper"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    }else if (playerSelection == "rock" && computerSelection == "scissor"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    } else if (playerSelection == computerSelection){
+        alert("Its a Tie!");
+    } else {
+        alert("You Lose!"+computerSelection+" beats "+playerSelection);
+    }
+}
+
 let userChoice = prompt("Rock Paper Scissor Shoot!\nPick your Choice:");
 
