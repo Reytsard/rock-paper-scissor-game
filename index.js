@@ -11,8 +11,8 @@ if computer's choice is better than user's choice
 display that the user lose
 else if users choice is better than the computer
 display that the user won
-if compyter and user have the same choice
-display that it is a time
+if computer and user have the same choice
+display that it is a tie
 
 picking of the choice
 roll for computer: we can use number to pick what choice 
@@ -31,5 +31,31 @@ function getComputerChoice(){
     }
 }
 
-let userChoice = prompt("Rock Paper Scissor Shoot!\nPick your Choice:");
+function playRound(playerSelection, computerSelection){
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
+    if(playerSelection == "paper" && computerSelection == "rock"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    } else if (playerSelection == "scissor" && computerSelection == "paper"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    }else if (playerSelection == "rock" && computerSelection == "scissor"){
+        alert("You Win! "+playerSelection+" beats "+computerSelection);
+    } else if (playerSelection == computerSelection){
+        alert("Its a Tie!");
+    } else {
+        alert("You Lose! "+computerSelection+" beats "+playerSelection);
+    }
+}
+
+function game(){
+    playRound(playerSelection, computerSelection)
+}
+
+alert("Welcome to the game of\nRock Paper Scissors\nBest-of-Five!")
+for(let i = 0; i < 5; i++){
+let playerSelection = prompt("Rock Paper Scissor Shoot!\nPick your Choice:\n(Rock / Paper / Scissor)");
+const computerSelection = getComputerChoice();
+playRound(playerSelection,computerSelection);
+}
+
 
