@@ -32,7 +32,8 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase();
+    const computerSelection = getComputerChoice();
+    playerSelection = this.value;
     computerSelection = computerSelection.toLowerCase();
     if(playerSelection == "paper" && computerSelection == "rock"){
         alert("You Win! "+playerSelection+" beats "+computerSelection);
@@ -52,10 +53,18 @@ function game(){
 }
 
 alert("Welcome to the game of\nRock Paper Scissors\nBest-of-Five!")
-for(let i = 0; i < 5; i++){
+// for(let i = 0; i < 5; i++){
 let playerSelection = prompt("Rock Paper Scissor Shoot!\nPick your Choice:\n(Rock / Paper / Scissor)");
-const computerSelection = getComputerChoice();
-playRound(playerSelection,computerSelection);
-}
 
+playRound(playerSelection,computerSelection);
+// }
+
+
+let userScore = 0;
+let compScore = 0;
+
+let btn = document.querySelectorAll("button");
+btn.forEach(btn => {
+    addEventListener('click',playRound)
+});
 
