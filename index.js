@@ -1,27 +1,3 @@
-/*Rock Paper Scissor game
-first: we need to prompt a greeting for the game 
-second: we should make the side of the computer to have a choice
-third: we should prompt the user to have a choice
-
-Pseudocode:
-The game will start
-the computer will pick a choice
-the user will picj a choice
-if computer's choice is better than user's choice
-display that the user lose
-else if users choice is better than the computer
-display that the user won
-if computer and user have the same choice
-display that it is a tie
-
-picking of the choice
-roll for computer: we can use number to pick what choice 
-1 -> Rock
-2 -> Paper
-3 -> Scissor 
-*/
-
-//computerRoll
 function getComputerChoice(){
     let a = Math.floor(Math.random() * 3 + 1);
     switch(a){
@@ -75,18 +51,6 @@ function checkScore(){
         scrbtn.disabled = true;
     }
 }
-
-// function game(){
-//     playRound(playerSelection, computerSelection);
-// }
-
-// alert("Welcome to the game of\nRock Paper Scissors\nBest-of-Five!")
-// for(let i = 0; i < 5; i++){
-// let playerSelection = prompt("Rock Paper Scissor Shoot!\nPick your Choice:\n(Rock / Paper / Scissor)");
-
-// playRound(playerSelection,computerSelection);
-// }
-
 
 let userScore = 0;
 let compScore = 0;
