@@ -6,63 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="index.js" defer></script> -->
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <!-- <div class="gameBox">
-        <div class="opponents-Side">
-            <div class="item">
-                <div class="img">
-                    <img src="images/rock.webp" alt="rock">
-                </div>
-                <div class="name">Rock</div>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="images/paper.webp" alt="Paper">
-                </div>
-                <div class="name">Paper</div>
-            </div>
-            <div class="item">
-                <div><img src="images/scissors.png" alt="Scissors"></div>
-                <div>Scissor</div>
-            </div>
-        </div>
-        <div class="screen"></div>
-        <div class="userSide">
-            <div class="item" for="userChoice">
-                <div class="img">
-                    <img src="images/rock.webp" alt="rock">
-                </div>
-                <div class="name">Rock</div>
-            </div>
-            <div class="item" for="userChoice">
-                <div>
-                    <img src="images/paper.webp" alt="Paper">
-                </div>
-                <div class="name">Paper</div>
-            </div>
-            <div class="item selected" for="userChoice">
-                <div><img src="images/scissors.png" alt="Scissors"></div>
-                <div>Scissor</div>
-            </div>
-        </div>
-    </div> -->
     <div class="header">Welcome to Rock-Paper-Scissor SHOOT!</div>
     <div class="choiceBox">
-        <button value="rock">
+        <button id="rockButton" type="button" class="btn">
             <div>
-                <img src="images/rock.webp" alt="">
+                <img src="images/rock.webp" alt="" value="rock">
             </div> 
             <div>Rock</div> 
         </button>
-        <button value="paper">
+        <button id="paperButton" type="button" class="btn">
             <div>
                 <img src="images/paper.webp" alt="">
             </div> 
             <div>Paper</div> 
         </button>
-        <button value="scissor">
+        <button id="scissorButton" type="button" class="btn">
             <div>
                 <img src="images/scissors.png" alt="">
             </div> 
@@ -79,8 +40,6 @@
             <div id="compScore">0</div>
         </div>
     </div>
-    <!-- <div class="submit">
-        <button type="submit">Lock In!</button>
-    </div> -->
+    <div id="screen"></div>
 </body>
 </html>

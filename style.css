@@ -7,7 +7,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: black;
+    color: white;
     gap: 60px;
 }
 
@@ -82,4 +83,14 @@ div .item .selected .name{
     display: flex;
     gap: 50px;
     text-align: center;
+}
+.screen{
+    color: white;
+}
+.choiceBox .btn{
+    border:2px solid white;
+    color: white;
+    padding: 5px;
+    background-color: black;
+    box-shadow: 0 0 10px white;
 }
