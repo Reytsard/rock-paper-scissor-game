@@ -60,6 +60,21 @@ function playRound(playerSelection){
     }
 
 }
+function checkScore(){
+    if(userScore == 5){
+        let header = document.querySelector(".header");
+        header.textContent = `You WON!!! You have defeated the computer`;
+        rckbtn.disabled = true;
+        pprbtn.disabled = true;
+        scrbtn.disabled = true;
+    }else if(compScore == 5){
+        let header = document.querySelector(".header");
+        header.innerHTML = `<strong>You LOST!!! You have been defeated by the computer</strong>`;
+        rckbtn.disabled = true;
+        pprbtn.disabled = true;
+        scrbtn.disabled = true;
+    }
+}
 
 // function game(){
 //     playRound(playerSelection, computerSelection);
@@ -79,25 +94,20 @@ let compScore = 0;
 let rckbtn = document.querySelector("#rockButton");
 rckbtn.addEventListener('click',() => {
     playRound('rock');
-    userScore = userScoreUpdate();
-    compScore = compScoreUpdate();
+    checkScore();
 });
 
 let pprbtn = document.querySelector("#paperButton");
-pprbtn.addEventListener('click',() => playRound('paper'));
+pprbtn.addEventListener('click',() => {
+    playRound('paper');
+    checkScore();
+});
 
 let scrbtn = document.querySelector("#scissorButton");
-scrbtn.addEventListener('click',() => playRound('scissor')); 
+scrbtn.addEventListener('click',() => {
+    playRound('scissor');
+    checkScore();
+}); 
 
-if(userScore == 5){
-    let header = document.querySelector(".header");
-    header.textContent = `You WON!!! You have defeated the computer`;
-    rckbtn.disabled = true;
-}else if(compScore == 5){
-    let header = document.querySelector(".header");
-    header.innerHTML = `<strong>You LOST!!! You have been defeated by the computer</strong>`;
-    rckbtn.id.toggle('#rockButton');
-    pprbtn.id.toggle('#paperButton');
-    scrbtn.id.toggle('#scissorButton');
-}
+
 
